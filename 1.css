@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.pacman {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 50%);
+    animation: pacman-chomp 0.8s infinite, pacman-move 4s linear infinite;
+}
+
+@keyframes pacman-chomp {
+    0% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 50%);
+    }
+    50% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 100%);
+    }
+    100% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 50%);
+    }
+}
+
+@keyframes pacman-move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.ghost {
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+    left: 200px;
+    box-shadow: inset 0 0 0 10px #fff;
+    animation: ghost-move 3s linear infinite;
+}
+
+@keyframes ghost-move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150px);
+    }
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    animation: dot-blink 1s infinite;
+}
+
+@keyframes dot-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins";
+}
+#k{
+    display:none;
+}
+.navbar1{
+    display: none;
+}
+html{
+    font-size: 60%;
+    overflow-x:hidden ;
+}
+:root{
+    --bg-color:#00000000;
+    --second-bg-color:#001005;
+    --text-color:white;
+    --main-color:#00ff51;
+}
+body{
+    background:var(--bg-color);
+    color:var(--text-color);
+    background-color:#001005;
+    color: white;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 12%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+    margin-top: -15px;
+    height: 20%;
+    overflow: visible;
+}
+p{
+    color:white
+}
+#menu-econ{
+    font-size: 3.6rem;
+    color:var(--main-color);
+    display: none;
+}
+.logo{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: -10%;
+    display: inline;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+span{
+    color:var(--main-color);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color:var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent ;
+    transition: 0.3s ease;
+}
+.navbar a:hover{
+    border-bottom: 3px solid var(--main-color);
+    color:var(--main-color)
+}
+#k{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 860px) and (min-width:660px){
+    #k{
+        display:none;
+    }
+.navbar a{
+    font-size: 1.4rem;
+}
+.logo{
+    font-size: 2rem;
+}
+}
+
+
+@media screen and (max-width: 660px) and (min-width:550px){
+#k{
+    display:none;
+}
+.navbar a{
+        font-size: 1.25rem;
+}
+.logo{
+        font-size: 1.85rem;
+        margin-left: -50px;
+}
+.navbar{
+    margin-right: -45px;
+}
+}
+.label{
+    display: none;
+    z-index: 1;
+}
+.m{
+    display: none;
+}
+#k{color:black}
+@media screen and (max-width: 550px) and (min-width:0px){
+#k{color:white}
+
+.label{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.775);
+    overflow: hidden;
+}
+.navbar{
+    display: none;
+}
+.logo{
+    font-size:1.3rem ;
+}
+
+h1{
+    color:#00ff51;
+    font-size: 18px;
+    font-weight:800 ;
+    padding: 10px ;
+    pointer-events: none;
+    margin-left:25%;
+    margin-top:10vh;
+
+}
+
+ul li {
+    list-style: none;
+    margin:  30px 0;
+    
+
+}
+ul li a {
+    color :white;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px 0;
+    display: block;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    text-align: center;
+}
+ul li a:hover{
+    color:#00ff51;
+    border-bottom: 3px solid var(--main-color);
+    color:var(--main-color);
+}
+
+.m{
+    display: none;
+}
+
+.label{
+    display: none;
+}
+
+#k{
+   display: flex;
+   margin-left: 90%;
+   margin-top: 5.5vh;
+   z-index: 3;
+   font-size: 15px;
+}
+#k:hover{
+    color:#00ff51;
+}
+#h{
+    display: flex;
+    margin-left: 90%;
+    margin-top: -33px;
+    z-index: 3;
+    font-size: 15px; 
+}
+#h:hover{
+    color:#00ff51
+}
+.m{
+    width: 100%;
+    height:100%;
+    margin-top: -5vh;
+}
+}
+.a{
+	width: 0;
+}
+
+body {
+  
+  height: 100%;
+}
+
+.pac-man {
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+  border-radius: 100em 100em 0 0;
+  background: #f00;
+  transform-origin: bottom;
+  animation: eating-top .5s infinite;
+  
+  &, &::before {
+    width:70px;
+    height: calc(70px/2);
+    background:#00ff51;
+  }
+  
+  &::before {
+    content: '';
+    display: block;
+    margin-top: calc(70px/2);
+    position: absolute;
+    transform-origin: top;
+    border-radius: 0 0 100em 100em;
+    transform: rotate(80deg);
+    animation: eating-bottom .5s infinite;
+  }
+  
+  &::after {
+    position: absolute;
+    border-radius: 100em;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-top: calc((70px / 2) - 10px);
+    margin-left: calc((70px / 2) - 10px);
+    transform-origin: center;
+    animation: 
+      center .5s infinite,
+      ball .5s -.33s infinite linear;
+  }
+}
+
+@keyframes eating-top{
+  0%{ transform: rotate(-40deg); }
+  50% { transform: rotate(0deg); }
+  100%{ transform: rotate(-40deg); }
+}
+
+@keyframes eating-bottom{
+  0%{ transform: rotate(80deg); }
+  50% { transform: rotate(0deg); }
+  100%{ transform: rotate(80deg); }
+}
+
+@keyframes center{
+  0%{ transform: rotate(40deg); }
+  50% { transform: rotate(0deg); }
+  100%{ transform: rotate(40deg); }
+}
+
+@keyframes ball{
+  0%{ 
+    opacity: .7;
+    box-shadow: 
+      70px 0 0 0 green,
+      120px 0 0 0 #00ff51,
+      170px 0 0 0 green
+    ;
+  }
+  100% { 
+    box-shadow: 
+      20px 0 0 0 #00ff51,
+      70px 0 0 0 green,
+      120px 0 0 0 #00ff51
+    ;
+  }
+  
+}
+
+#p{
+    margin-top:30vh;
+}
+#p:hover{
+    background-color: green;
+}
+
+
+h4{
+    font-size: 50px;
+    margin-left: 40px;
+    margin-top: 20%;
+    z-index: 10;
+    color: green;
+}
+
+
+@keyframes x{
+	0%{color:green}
+	1%{color:#00ff51}
+	2%{color:green}
+	3%{color:#00ff51}
+	4%{color:green}
+	5%{color:#00ff51}
+	6%{color:green}
+	7%{color:#00ff51}
+	8%{color:green}
+	9%{color:#00ff51}
+	10%{color:green}
+	11%{color:#00ff51}
+	12%{color:green}
+	13%{color:#00ff51}
+	14%{color:green}
+	15%{color:#00ff51}
+	16%{color:green}
+    17%{color:#00ff51}
+	18%{color:green}
+	19%{color:green}
+	20%{color:#00ff51}
+	21%{color:#42b968}
+    22%{color:#00ff51}
+	23%{color:green}
+	24%{color:#00ff51}
+	25%{color:green}
+	26%{color:#00ff51}
+	27%{color:green}
+	28%{color:#00ff51}
+	29%{color:green}
+	30%{color:#00ff51}
+	31%{color:green}
+	32%{color:#00ff51}
+    33%{color:#00ff51}
+	34%{color:green}
+	35%{color:#00ff51}
+	36%{color:green}
+	36%{color:#00ff51}
+	37%{color:green}
+	38%{color:#00ff51}
+	39%{color:green}
+	40%{color:#00ff51}
+	50%{color:green}
+	51%{color:#00ff51}
+	52%{color:#00ff51}
+	53%{color:green}
+	54%{color:#00ff51}
+	55%{color:green}
+	56%{color:#00ff51}
+	57%{color:green}
+	58%{color:#00ff51}
+	59%{color:green}
+	60%{color:#00ff51}
+	61%{color:green}
+	62%{color:#00ff51}
+    63%{color:#00ff51}
+	64%{color:green}
+	65%{color:#00ff51}
+	66%{color:green}
+	67%{color:#00ff51}
+	68%{color:#00ff51}
+	69%{color:green}
+	70%{color:#00ff51}
+	71%{color:green}
+	72%{color:green}
+	73%{color:#00ff51}
+    74%{color:#00ff51}
+	75%{color:green}
+	76%{color:#00ff51}
+	77%{color:green}
+	78%{color:#00ff51}
+	79%{color:#00ff51}
+	80%{color:green}
+	81%{color:#00ff51}
+	82%{color:green}
+	83%{color:#00ff51}
+	84%{color:green}
+	85%{color:#00ff51}
+	86%{color:#00ff51}
+	87%{color:green}
+	88%{color:#00ff51}
+	89%{color:green}
+	90%{color:#00ff51}
+	91%{color:green}
+	92%{color:#00ff51}
+	93%{color:green}
+	94%{color:#00ff51}
+	95%{color:green}
+    96%{color:#00ff51}
+	97%{color:#00ff51}
+	98%{color:green}
+	99%{color:#00ff51}
+	100%{color:green}
+
+}
+h4{animation: x 80s ;}
+
+
+@media screen and (max-width: 860px) and (min-width:660px){
+    h4{
+        font-size: 40px;
+        margin-left: 30px;
+        margin-top: 20%;
+        z-index: 10;
+        color: green;
+    }
+}
+
+@media screen and (max-width: 660px) and (min-width:550px){
+    h4{
+        font-size: 30px;
+        margin-left: 30px;
+        margin-top: 15%;
+        z-index: 10;
+        color: green;
+    }
+}
+
+@media screen and (max-width: 550px) and (min-width:0px){
+    h4{
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 20%;
+        z-index: 10;
+        color: green;
+    }
+}
